@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int size = sc.nextInt();
+         int arr[] = new int[size];
+         for(int i=0;i<size;i++){
+         arr[i]=sc.nextInt();
+         }
+         int firstmax = arr[0];
+         int secondmax = Integer.MIN_VALUE;
+         for(int i=1;i<size;i++){
+         if(arr[i]>firstmax){
+         firstmax=arr[i];
+         }
+     }
+         for(int i=1;i<size;i++){
+           if(arr[i]>secondmax && arr[i]<firstmax){
+             secondmax=arr[i];
+         }
+    }
+          System.out.println(firstmax+" "+secondmax);
+}
+}
+        
